@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "functions": {
+    "api/process.py": {
+      "runtime": "python3.12",
+      "maxDuration": 300
+    }
+  },
+  "routes": [
+    { "src": "/api/process", "dest": "/api/process.py" },
+    { "src": "/api/health", "dest": "/api/health.py" },
+    { "src": "/api/upload-token", "dest": "/api/upload-token.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
+}
